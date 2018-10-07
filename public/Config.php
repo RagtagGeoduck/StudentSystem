@@ -14,7 +14,7 @@ function config(){
         "port"=>"3306", // mysql端口号
         "user"=>"root", // mysql用户名
         "passwd"=>"", // mysql 密码
-        "dbname"=>"sx01" // 项目所使用的数据库
+        "dbname"=>"pscj" // 项目所使用的数据库
     ];
 
     return $configList;
