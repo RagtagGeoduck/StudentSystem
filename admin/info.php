@@ -1,5 +1,5 @@
 <?php
-require "fun.php";
+require_once "../public/Config.php";
 header("Cache-Control:No-Cache");
 header("Pragma:No-Cache");
 session_start();

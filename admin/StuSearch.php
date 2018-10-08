@@ -59,15 +59,14 @@
                 <li><a href="#">学生学分排序</a></li>
 
 
-              <li class="nav-header"><i class="icon-signal"></i> 统计</li>
-              <li class=""><a href="">通用</a></li>
-              <li><a href="">用户</a></li>
-              <li><a href="">访问者</a></li>
+                <li class="nav-header"><i class="icon-signal"></i> 课程信息管理</li>
+                <li class=""><a href="">课程信息录入</a></li>
+                <li><a href="">课程信息查询</a></li>
 
 
               <li class="nav-header"><i class="icon-user"></i> 成绩信息管理</li>
               <li><a href="AddStuScore.php">成绩信息录入</a></li>
-              <li><a href="temple.php">学生成绩查询</a></li>
+              <li><a href="ShowStuKC.php">学生成绩查询</a></li>
 			  <li><a href="#">退出</a></li>
             </ul>
           </div>

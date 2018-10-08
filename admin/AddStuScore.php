@@ -60,15 +60,14 @@
                     <li><a href="#">学生学分排序</a></li>
 
 
-                    <li class="nav-header"><i class="icon-signal"></i> 统计</li>
-                    <li class=""><a href="">通用</a></li>
-                    <li><a href="">用户</a></li>
-                    <li><a href="">访问者</a></li>
+                    <li class="nav-header"><i class="icon-signal"></i> 课程信息管理</li>
+                    <li class=""><a href="">课程信息录入</a></li>
+                    <li><a href="">课程信息查询</a></li>
 
 
                     <li class="nav-header"><i class="icon-user"></i> 成绩信息管理</li>
                     <li class="active"><a href="AddStuScore.php">成绩信息录入</a></li>
-                    <li><a href="temple.php">学生成绩查询</a></li>
+                    <li><a href="ShowStuKC.php">学生成绩查询</a></li>
                     <li><a href="#">退出</a></li>
                 </ul>
             </div>
@@ -76,15 +75,15 @@
         <div class="span9">
             <div class="row-fluid">
                 <div class="page-header">
-                    <h1>学生信息录入 <small></small></h1>
+                    <h1>成绩信息录入 <small></small></h1>
                 </div>
 
 
                 <!--              <div align="center"><font face="幼圆" size="5" content="#008000"><b>学生信息录入</b></font></div>-->
 
-                <div id="placeholder" style="width:80%;height:600px;">
+                <div id="placeholder" style="width:80%;height:300px;">
                     <!--              插入表单-->
-                    <div align="center"><font face="幼圆" size="5" content="#008000"><b>成绩信息录入</b></font> </div>
+<!--                    <div align="center"><font face="幼圆" size="5" content="#008000"><b>成绩信息录入</b></font> </div>-->
                     <form action="AddStuScore.php" method="get" style="margin: 0;">
                         <table width="450" align="center">
                             <tr>
@@ -94,8 +93,8 @@
                                         require_once "../public/Config.php";
                                         $kc_sql = "select distinct KCM from KCB";
                                         $kc_result = mysqli_query($conn, $kc_sql);
-                                        echo "<pre>";
-                                        var_dump($kc_result);
+//                                        echo "<pre>";
+//                                        var_dump($kc_result);
                                         while($kc_result=mysqli_fetch_array($kc_result, MYSQLI_ASSOC)){
                                             echo "<option>".$kc_row['KCB']."</option>";
                                         }
@@ -116,23 +115,24 @@
                                     <input type="submit" name="Query" value="查询">
                                 </td>
                             </tr>
+                            <?php
+                            @include "InsertScore.php";
+                            ?>
                         </table>
                     </form>
-                    <?php
-                    @include "InsertScore.php";
-                    ?>
+
                 </div>
                 <br />
                 <div id="visits" style="width:80%;height:300px;">
-                    <?php
-                    require_once "../public/Config.php";
+                   <!-- --><?php
+/*                    require_once "../public/Config.php";
                     $sql = "select distinct KCM from KCB";
                     $result = mysqli_query($conn, $sql);
 //                    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-                    echo "<pre>";
-                    var_dump($result);
+//                    echo "<pre>";
+//                    var_dump($result);
 //                    var_dump($row)
-                    ?>
+                    */?>
                 </div>
             </div>
         </div>

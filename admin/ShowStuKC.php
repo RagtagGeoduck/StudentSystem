@@ -59,15 +59,14 @@
                     <li><a href="#">学生学分排序</a></li>
 
 
-                    <li class="nav-header"><i class="icon-signal"></i> 统计</li>
-                    <li class=""><a href="">通用</a></li>
-                    <li><a href="">用户</a></li>
-                    <li><a href="">访问者</a></li>
+                    <li class="nav-header"><i class="icon-signal"></i> 课程信息管理</li>
+                    <li class=""><a href="">课程信息录入</a></li>
+                    <li><a href="">课程信息查询</a></li>
 
 
                     <li class="nav-header"><i class="icon-user"></i> 成绩信息管理</li>
                     <li><a href="AddStuScore.php">成绩信息录入</a></li>
-                    <li class="active"><a href="#">模版</a></li>
+                    <li class="active"><a href="#">学生成绩查询</a></li>
                     <li><a href="#">退出</a></li>
                 </ul>
             </div>
@@ -75,12 +74,24 @@
         <div class="span9">
             <div class="row-fluid">
                 <div class="page-header">
-                    <h1>学生信息录入 <small></small></h1>
+                    <h1>学生成绩查询 <small></small></h1>
                 </div>
 
                 <div id="placeholder" style="width:80%;height:600px;">
                     <!--              插入表单1-->
-
+                    <form name="frm1" method="post" action="ShowStuKC.php" style="margin:0">
+                        <table width="500" align="center">
+                            <tr>
+                                <td width="60"><span>学号:</span></td>
+                                <td width="160"><input name="StuNum" type="text" size="20"></td>
+                                <td><input type="submit" name="query" value="查找"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </form>
+                    <?php
+                    include "SearchScore.php";
+                    ?>
                 </div>
                 <br />
                 <div id="visits" style="width:80%;height:300px;">
