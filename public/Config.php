@@ -8,9 +8,10 @@
 
 // 连接数据库必备参数 
 
-function config(){
+// PDO 封装
+/*function config(){
     $configList = [
-        "host"=>"localhost", //mysql地址  
+        "host"=>"localhost", //mysql地址
         "port"=>"3306", // mysql端口号
         "user"=>"root", // mysql用户名
         "passwd"=>"", // mysql 密码
@@ -18,4 +19,12 @@ function config(){
     ];
 
     return $configList;
-}
+}*/
+$server = "localhost";
+$user = "root";
+$password = "";
+$database = "pscj";
+$conn = mysqli_connect($server, $user, $password);
+mysqli_select_db($conn,$database);
+mysqli_query($conn,"SET NAMES utf8");
+?>
