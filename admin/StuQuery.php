@@ -83,7 +83,7 @@ if($new_row = mysqli_fetch_array($new_result, MYSQLI_ASSOC)){
         echo "<td>$ZY</td>";
         echo "<td>$ZXF</td>";
         echo "</tr>";
-    }while($new_row = mysqli_fetch_array($new_result, MYSQLI_ASSOC));
+    }while($new_row = mysqli_fetch_array($new_result));
     echo "</table>";
     // 分页导航条代码
     $pagenav = "";
